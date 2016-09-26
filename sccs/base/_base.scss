@@ -1,0 +1,61 @@
+/* ---------->>> GLOBAL <<<-----------*/
+.container
+{
+    position: relative;
+
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: .625rem;
+    padding-left: .625rem;
+
+    @include clear;
+}
+
+@media (min-width: 48em)
+{
+    .container
+    {
+        width: 744px;
+    }
+}
+
+@media (min-width: 64em)
+{
+    .container
+    {
+        width: 960px;
+    }
+}
+
+@media (min-width: 80em)
+{
+    .container
+    {
+        width: 1200px;
+        padding-right: .9375rem;
+        padding-left: .9375rem;
+    }
+}
+
+.browserupgrade
+{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 50px;
+
+    text-align: center;
+
+    background-color: #fff;
+
+    a
+    {
+        text-decoration: underline;
+
+        color: #a52a2a;
+    }
+}

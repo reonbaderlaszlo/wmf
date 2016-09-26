@@ -1,0 +1,98 @@
+/* ---------->>> SOON <<<-----------*/
+.soon {
+    height: calc(100vh - 70px);
+    width: 100%;
+    background: #273043 url("../images/soon/background.png") no-repeat center bottom;
+    background-size: cover;
+
+    .countdown {
+        text-align: center;
+        margin: 15px auto;
+
+        div {
+            width: 74px;
+            height: 75px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            display: inline-block;
+            margin: 0 2px;
+            position: relative;
+        }
+
+        p {
+            font-size: 44px;
+            font-weight: 300;
+            font-family: 'Bree Serif', serif;
+            line-height: 72px;
+            text-align: center;
+            color: #e10613;
+        }
+
+        span {
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            color: #fff;
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: 'Open Sans', sans-serif;
+        }
+    }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .soon {
+        background: #273043 url("../images/soon/background-retina.png") no-repeat center bottom;
+        background-size: cover;
+    }
+}
+
+.soon-header {
+    padding-top: 41px;
+
+    .wmf-logo {
+        width: 51px;
+        height: 60px;
+        background: url("../images/soon/wmf-logo.png") no-repeat 0 0;
+        background-size: contain;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .soon-title {
+        font-size: 24px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Bree Serif', serif;
+        padding-top: 15px;
+    }
+}
+
+.soon-footer {
+    text-align: center;      
+    height: 70px;   
+
+    a {
+        display: inline-block;
+        background-size: contain !important;
+        margin: 0 5px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .spar-logo {
+        width: 109px;
+        height: 18px;
+        background: url("../images/soon/spar-logo.png") no-repeat 0 0;
+    }
+
+    .interspar-logo {
+        width: 184px;
+        height: 18px;
+        background: url("../images/soon/interspar-logo.png") no-repeat 0 0;
+    }
+}

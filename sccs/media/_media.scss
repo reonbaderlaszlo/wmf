@@ -1,0 +1,47 @@
+/* ---------->>> MEDIA QUERY <<<-----------*/
+
+/* ---------->>> 1279 <<<-----------*/
+@media only screen and (max-width: 1279px) {}
+
+/* ---------->>> 1023 <<<-----------*/
+@media only screen and (max-width: 1023px) {}
+
+/* ---------->>> 767 <<<-----------*/
+@media only screen and (max-width: 767px) {
+    .soon {
+        background: #273043 url("../images/soon/background-mobile.png") no-repeat center bottom;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5) and (min-resolution: 1.5dppx) {
+    .soon {
+        background: #273043 url("../images/soon/background-mobile.png") no-repeat center bottom;
+        background-size: cover;
+    }
+}
+
+/* ---------->>> 640 <<<-----------*/
+@media only screen and (max-width: 640px) {}
+
+/* ---------->>> 479 <<<-----------*/
+@media only screen and (max-width: 479px) {}
+
+/* ---------->>> 425 <<<-----------*/
+@media only screen and (max-width: 425px) {
+    .soon {
+        background-size: 150%;
+    }
+}
+
+@media only screen and (max-width: 425px) and (-webkit-min-device-pixel-ratio: 1.5) and (min-resolution: 1.5dppx) {
+    .soon {
+        background-size: 150%;
+    }
+}
+
+/* ---------->>> 375 <<<-----------*/
+@media only screen and (max-width: 375px) {}
+
+/* ---------->>> 320 <<<-----------*/
+@media only screen and (max-width: 320px) {}

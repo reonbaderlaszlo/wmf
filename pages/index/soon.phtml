@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <title>WMF Hamarosan</title>
+
+    <meta name="description" content="I wouldn't waste 2 minutes optimising my keyword meta tags for Google, but Google tells us to pay attention to meta descriptions.">
+    <meta name="keywords" content="SEO, search engine optimisation, optimization">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href='<?php echo $this->config->rootDir; ?>/<?php echo $this->system; ?>/view/<?php echo $this->config->template; ?>/images/favicon/favicon.ico' />
+    <link rel="apple-touch-icon" href='<?php echo $this->config->rootDir; ?>/<?php echo $this->system; ?>/view/<?php echo $this->config->template; ?>/images/favicon/favicon.png'/>
+    <link rel="icon" type="image/png" href='<?php echo $this->config->rootDir; ?>/<?php echo $this->system; ?>/view/<?php echo $this->config->template; ?>/images/favicon.png'/>
+
+    <!-- Screen CSS -->
+    <link href="<?php echo $this->config->rootDir; ?>/<?php echo $this->system; ?>/view/<?php echo $this->config->template; ?>/css/screen.css?t=<?php echo time(); ?>" rel="stylesheet">
+
+    <!-- 3rd Party Css -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext" rel="stylesheet">
+
+    <!-- JQuery -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+</head>
+<body>
+<!--[if lt IE 9]>
+    <p class="browserupgrade"><strong>Elavult</strong> böngészőt használsz. Kérlek <a href="http://browsehappy.com/">tölts le</a> újabb böngészőt, az optimális böngészés érdekében.</p>
+<![endif]-->
+<section class="soon">
+	<header class="soon-header">
+		<a href="#/wmf" class="wmf-logo"></a>
+		<div class="soon-title">Hamarosan...</div>
+	</header>
+	<div class="countdown">
+		<div class="day">
+			<p></p>
+			<span>Nap</span>
+		</div>
+		<div class="hour">
+			<p></p>
+			<span>Óra</span>
+		</div>
+		<div class="minute">
+			<p></p>
+			<span>Perc</span>
+		</div>
+	</div>
+</section>
+<footer class="soon-footer">
+	<a target="_blank" href="http://www.spar.hu" class="spar-logo"></a>
+    <a target="_blank" href="http://www.spar.hu" href="#" class="interspar-logo"></a>
+</footer>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        var target_date = new Date(2016, 9, 3, 6, 0, 0, 0).getTime();
+        var days, hours, minutes;
+
+        function initTimer() {
+
+            var current_date = new Date().getTime();
+            var seconds_left = (target_date - current_date) / 1000;
+
+            days = parseInt(seconds_left / 86400);
+            seconds_left = seconds_left % 86400;
+
+            hours = parseInt(seconds_left / 3600);
+            seconds_left = seconds_left % 3600;
+
+            minutes = parseInt(seconds_left / 60);
+
+            if (hours <= 0 && minutes <= 0)
+                location.reload();
+
+            hours = hours < 10 ? "0" + hours : "" + hours;
+            minutes = minutes < 10 ? "0" + minutes : "" + minutes;
+
+            $('.day p').text(days);
+            $('.hour p').text(hours);
+            $('.minute p').text(minutes);
+        }
+
+        initTimer();
+
+        setInterval(function() {
+            initTimer();
+        }, 1000);
+    });
+    </script>
+</body>
+</html>
